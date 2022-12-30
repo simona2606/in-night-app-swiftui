@@ -127,7 +127,7 @@ struct EditEventView: View {
                                         openAlert.toggle()
                                         print("int: \(int)")
                                     }
-                                    .frame(width: UIScreen.main.bounds.width * 0.82, height: UIScreen.main.bounds.width * 0.15)
+                                    .frame(width: UIScreen.main.bounds.width * 0.85, height: UIScreen.main.bounds.width * 0.15)
                             }
                             
                         }

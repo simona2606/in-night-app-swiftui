@@ -15,17 +15,20 @@ struct PriceCardView: View {
     var body : some View {
         ZStack {
             RoundedRectangle(cornerRadius: 10)
-                .foregroundColor(.white)
+                .fill(LinearGradient(gradient: Gradient(colors: [Color.purple, Color.blue]), startPoint: .topLeading, endPoint: .bottomTrailing))
             HStack {
-                VStack(alignment:.leading) {
+                VStack(alignment:.leading, spacing: 2) {
                     Text(tables)
                         .fontWeight(.bold)
+                        .foregroundColor(.white)
                     Text("\(formattedDate(date: orariocard,format: "HH:mm"))")
+                        .foregroundColor(.white)
                 }
                 
                 Spacer()
                 Text(prezzocard)
                     .fontWeight(.semibold)
+                    .foregroundColor(.white)
             }
             .foregroundColor(.black)
             .padding(.horizontal)

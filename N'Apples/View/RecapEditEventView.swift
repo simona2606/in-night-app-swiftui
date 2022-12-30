@@ -121,7 +121,7 @@ struct RecapEditEventView: View {
                         ForEach(0 ..< updateEventViewModel.eventPrice.count, id: \.self) { int in
                             
                             PriceCardView(orariocard: updateEventViewModel.eventTimeForPrice[int], prezzocard: String(updateEventViewModel.eventPrice[int]), tables: updateEventViewModel.eventTable[int])
-                                .frame(width: UIScreen.main.bounds.width * 0.82, height: UIScreen.main.bounds.width * 0.15)
+                                .frame(width: UIScreen.main.bounds.width * 0.85, height: UIScreen.main.bounds.width * 0.15)
                             
                         }.padding(.vertical, 5)
                             
