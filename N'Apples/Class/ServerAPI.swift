@@ -87,7 +87,7 @@ func getSingleReservation(id: String) {
                 let jsonDecoder = JSONDecoder()
                 do {
                     let res = try jsonDecoder.decode(ResponseRes.self, from: data)
-                    print("Reserveeee: \(res)")
+                    print("Reserve: \(res)")
                     Task {
                         try await reservationModel.retrieveAllEmail(email: res.reservation.email)
                         if reservationModel.reservation.isEmpty {
