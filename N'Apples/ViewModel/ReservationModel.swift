@@ -224,6 +224,7 @@ class ReservationModel: ObservableObject {
             self.records.removeAll()
             self.reservation.removeAll()
         }
+        
         var numScan = numscan
         
         try await retrieveAllId(id: id)
@@ -240,7 +241,6 @@ class ReservationModel: ObservableObject {
                 try await delete(at: i)
             }
         
-            
             try await insertUpdate(event: rec.idEvent, id: rec.id, name: rec.name, surname: rec.surname, email: rec.email, nameList: rec.nameList, numFriends: rec.numFriends, numScan: rec.numScan)
            
             try await retrieveAllIdDecrypt(id: id)

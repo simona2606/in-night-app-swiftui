@@ -73,15 +73,17 @@ struct ScannerView: View {
                 try await reservationModel.updateNumScan(id: viewModel.lastQrCode, numscan: numScan)
                 print("Reservation: \(reservationModel.reservation)")
                 print("Value qr: \(viewModel.lastQrCode)")
-
+                
                 if(!reservationModel.reservation.isEmpty) {
                     flagCheck.toggle()
                     print("Valid: \(flagCheck)")
-
+                    
                 } else {
                     flagNotCheck.toggle()
                     print("Not valid: \(flagNotCheck)")
                 }
+                
+                
                 
             }
     }

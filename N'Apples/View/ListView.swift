@@ -96,28 +96,29 @@ struct ListView: View {
                                 Divider()
                             }
                         }
-                        
-                        HStack {
-                            Spacer()
-                            if (selected == 0) {
-                                Text("Total: \(tot) people")
-                                    .font(.title3)
-                                    .bold()
-                                    .foregroundColor(.white)
-                                    .padding(.horizontal, 30)
-                                    .padding(.top, 40)
-                            } else if (selected == 1) {
-                                Text("Total: \(totalNumFriends+totalName) people")
-                                    .font(.title3)
-                                    .bold()
-                                    .foregroundColor(.white)
-                                    .padding(.horizontal, 30)
-                                    .padding(.top, 40)
-                            }
-                            Spacer()
-                        }
                     }
-                }
+                }.overlay(
+                    HStack {
+                        Spacer()
+                        if (selected == 0) {
+                            Text("Total: \(tot) people")
+                                .font(.title3)
+                                .bold()
+                                .foregroundColor(.white)
+                                .padding(.horizontal, 30)
+                                .padding(.top, 40)
+                        } else if (selected == 1) {
+                            Text("Total: \(totalNumFriends+totalName) people")
+                                .font(.title3)
+                                .bold()
+                                .foregroundColor(.white)
+                                .padding(.horizontal, 30)
+                                .padding(.top, 40)
+                        }
+                        Spacer()
+                    }
+                    , alignment: .bottom)
+                
             }
             
             .navigationTitle(Text("Reservation"))

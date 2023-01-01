@@ -26,7 +26,6 @@ struct ReservationStruct: Decodable {
     var idEvent: String
     var nameList: String
     var numFriends: Int
-    
 }
 
 func insertEventOnServer(idEvent: String, nameList: String) {
@@ -59,7 +58,6 @@ func insertEventOnServer(idEvent: String, nameList: String) {
     task.resume()
 }
 
-
 func getSingleReservation(id: String) {
     
     let reservationModel = ReservationModel()
@@ -91,9 +89,13 @@ func getSingleReservation(id: String) {
                     Task {
                         try await reservationModel.retrieveAllEmail(email: res.reservation.email)
                         if reservationModel.reservation.isEmpty {
+                            
                             try await reservationModel.insert(event: res.reservation.idEvent, id: res.reservation.id, name: res.reservation.name, surname: res.reservation.surname, email: res.reservation.email, nameList: res.reservation.nameList, numFriends: res.reservation.numFriends)
                             
                             try await reservationModel.updateNumScan(id: res.reservation.idEvent, numscan: 0)
+                            
+                            
+                            
                         } else {
                             try await reservationModel.updateNumScan(id: res.reservation.idEvent, numscan: 0)
                         }

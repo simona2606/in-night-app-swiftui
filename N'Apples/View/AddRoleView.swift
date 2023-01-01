@@ -82,11 +82,21 @@ struct AddRoleView: View {
                     if (activatePicker) {
                         VStack(alignment: .leading, spacing: 10) {
                             
-                            Text("\(userViewModel.user.first?.username ?? "")")
+                            VStack (alignment: .leading, spacing: 3) {
+                                Text("Username:")
+                                    .font(.callout)
+                                    .bold()
+                                Text("\(userViewModel.user.first?.username ?? "")")
+                                    .font(.system(size: 15))
+                            }.padding(.bottom)
                             
-                            Text("E-mail: \(userViewModel.email)")
-                                .font(.callout)
-                                .bold()
+                            VStack(alignment: .leading, spacing: 3) {
+                                Text("E-mail:")
+                                    .font(.callout)
+                                    .bold()
+                                Text("\(userViewModel.user.first?.email ?? "")")
+                                    .font(.system(size: 15))
+                            }.padding(.bottom)
                             
                             HStack {
                                 Text("Roles")
@@ -109,7 +119,7 @@ struct AddRoleView: View {
                                 Color.white
                                 VStack (alignment: .center, spacing: 10) {
                                     
-                                    VStack(alignment: .leading, spacing: 5) {
+                                    VStack(alignment: .leading, spacing: 10) {
                                         
                                         Text("What can Roles do?")
                                             .font(.system(size: 16))
@@ -117,29 +127,42 @@ struct AddRoleView: View {
                                             .foregroundColor(.black)
                                             .padding(.bottom)
                                         
-                                        Text("Collaborator")
-                                            .font(.system(size: 13))
-                                            .bold()
+                                        VStack(alignment: .leading, spacing: 3) {
+                                            Text("Collaborator")
+                                                .font(.system(size: 13))
+                                                .bold()
+                                            
+                                            VStack(alignment: .leading, spacing: 2) {
+                                                Text("They have access to the same functions as you,")
+                                                    .font(.system(size: 10))
+                                                Text("but they can't delete events.")
+                                                    .font(.system(size: 10))
+                                            }
+                                        }
                                         
-                                        Text("They have access to the same functions as you.")
-                                            .font(.system(size: 10))
+                                        VStack(alignment: .leading, spacing: 3) {
+                                            Text("Promoter")
+                                                .font(.system(size: 13))
+                                                .bold()
+                                            
+                                            VStack(alignment: .leading, spacing: 2) {
+                                                Text("They can access to the lists and add new")
+                                                    .font(.system(size: 10))
+                                                Text("participants.")
+                                                    .font(.system(size: 10))
+                                            }
+                                        }
                                         
-                                        Text("Promoter")
-                                            .font(.system(size: 13))
-                                            .bold()
-                                        
-                                        Text("They can only manage their lists.")
-                                            .font(.system(size: 10))
-                                        
-                                        Text("Box-Office")
-                                            .font(.system(size: 13))
-                                            .bold()
-                                        
-                                        Text("They can access to the lists and scan QR Codes.")
-                                            .font(.system(size: 10))
-                                        
-                                    }.multilineTextAlignment(.leading)
-                                        .foregroundColor(.black)
+                                        VStack(alignment: .leading, spacing: 3) {
+                                            Text("Box-Office")
+                                                .font(.system(size: 13))
+                                                .bold()
+                                            
+                                            Text("They can scan QR Codes of participants.")
+                                                .font(.system(size: 10))
+                                            
+                                        }
+                                    }.foregroundColor(.black)
                                     
                                     Button(action: {
                                         self.showPopUp = false

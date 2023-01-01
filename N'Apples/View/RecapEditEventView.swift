@@ -92,13 +92,16 @@ struct RecapEditEventView: View {
                             .font(.title3)
                             .bold()
                             .foregroundColor(.white)
-                        Button(action: {
-                            let linkvar = "https://quizcode.altervista.org/API/discorganizer/Reservation.php?idEvent=\(updateEventViewModel.eventID)"
-                            UIPasteboard.general.string =  linkvar
-                        }, label: {
-                            Image(systemName: "doc.on.clipboard")
-                                .cornerRadius(5)
-                        })
+                        
+                        if #available(iOS 16.0, *) {
+                            ShareLink(item: "https://quizcode.altervista.org/API/discorganizer/Reservation.php?idEvent=\(updateEventViewModel.eventID)") {
+                                Image(systemName: "square.and.arrow.up")
+                                    .bold()
+                                    .padding(10)
+                            }
+                        } else {
+                            // Fallback on earlier versions
+                        }
                         
                     }
                     
@@ -219,5 +222,6 @@ struct RecapEditEventView: View {
         })
         
     }
+    
 }
 
