@@ -39,6 +39,7 @@
 		3ED7B2E729563B5C00AEBD95 /* ValidTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED7B2E629563B5C00AEBD95 /* ValidTicket.swift */; };
 		3ED7B2E929563B6600AEBD95 /* InvalidTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED7B2E829563B6600AEBD95 /* InvalidTicket.swift */; };
 		3EDDCF21294CD534009EE234 /* RecapEditEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDDCF20294CD534009EE234 /* RecapEditEventView.swift */; };
+		3EE5083229624D4E0019D45D /* AlertField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE5083129624D4E0019D45D /* AlertField.swift */; };
 		3EE6AEEA2951AF6D00965A2C /* PriceCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE6AEE92951AF6D00965A2C /* PriceCardView.swift */; };
 		3EEDFB5C294B8BBA000D15A5 /* CreateEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEDFB5B294B8BBA000D15A5 /* CreateEventView.swift */; };
 		3EF81BC2295F05A100759C03 /* AlertDelEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF81BC1295F05A100759C03 /* AlertDelEvent.swift */; };
@@ -94,6 +95,7 @@
 		3ED7B2E629563B5C00AEBD95 /* ValidTicket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidTicket.swift; sourceTree = "<group>"; };
 		3ED7B2E829563B6600AEBD95 /* InvalidTicket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvalidTicket.swift; sourceTree = "<group>"; };
 		3EDDCF20294CD534009EE234 /* RecapEditEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecapEditEventView.swift; sourceTree = "<group>"; };
+		3EE5083129624D4E0019D45D /* AlertField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertField.swift; sourceTree = "<group>"; };
 		3EE6AEE92951AF6D00965A2C /* PriceCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceCardView.swift; sourceTree = "<group>"; };
 		3EEDFB5B294B8BBA000D15A5 /* CreateEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventView.swift; sourceTree = "<group>"; };
 		3EF81BC1295F05A100759C03 /* AlertDelEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDelEvent.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				3E661A1E294A2A90002B8378 /* AlertLogin.swift */,
 				3E661A20294A2F41002B8378 /* AlertReg.swift */,
 				3EF81BC1295F05A100759C03 /* AlertDelEvent.swift */,
+				3EE5083129624D4E0019D45D /* AlertField.swift */,
 			);
 			path = Alert;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				3EF81BC2295F05A100759C03 /* AlertDelEvent.swift in Sources */,
 				3EE6AEEA2951AF6D00965A2C /* PriceCardView.swift in Sources */,
 				3E3C33F0282BB6B40073B6E8 /* ScannerViewModel.swift in Sources */,
+				3EE5083229624D4E0019D45D /* AlertField.swift in Sources */,
 				3ED57BB0294DF1CD00637616 /* EditEventView.swift in Sources */,
 				3E80318E28578FEC00837C39 /* AlertCancelPrice.swift in Sources */,
 				3E3C33E2282BB5AC0073B6E8 /* ImageSaved.swift in Sources */,

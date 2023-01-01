@@ -24,6 +24,7 @@ struct RegistrationView: View {
     
     @State var presentAlert: Bool = false
     @State var showAlert: Bool = false
+    @State var showAlertField: Bool = false
     @State var showAlertRegister: Bool = false
     
     private var isSignedIn: Bool {
@@ -71,13 +72,7 @@ struct RegistrationView: View {
                             .padding(.horizontal, 40)
                             .padding(.bottom, 18)
                         
-//                        TextField("Password", text: $userModel.password)
-//                            .font(.system(size: 18))
-//                            .padding(.horizontal, 40)
-                        
-                        
-                        
-                        
+
                         HStack(spacing: 15) {
                             
                             if eye {
@@ -125,16 +120,20 @@ struct RegistrationView: View {
                             NavigationLink(destination: EventsView(), isActive: $login) {
                                 Button(action: {
                                     Task {
-                                        try await userModel.retrieveAllEmail(email: userModel.email)
-                                        if !userModel.user.isEmpty {
-                                            let usrDef = UserDefaults.standard
-                                            usrDef.set(userModel.username, forKey: "username")
-                                            
-                                            userSettings.id = userModel.username
-                                            
-                                            login = true
+                                        if(userModel.password.isEmpty || userModel.email.isEmpty || userModel.username.isEmpty) {
+                                            showAlertField = true
                                         } else {
-                                            showAlert = true
+                                            try await userModel.retrieveAllEmail(email: userModel.email)
+                                            if !userModel.user.isEmpty {
+                                                let usrDef = UserDefaults.standard
+                                                usrDef.set(userModel.username, forKey: "username")
+                                                
+                                                userSettings.id = userModel.username
+                                                
+                                                login = true
+                                            } else {
+                                                showAlert = true
+                                            }
                                         }
                                     }
                                 }, label: {
@@ -153,11 +152,15 @@ struct RegistrationView: View {
                             
                             Button(action: {
                                 Task {
-                                    try await userModel.insert(username: userModel.username, password: userModel.password, email: userModel.email)
-                                    let usrDef = UserDefaults.standard
-                                    usrDef.set(userModel.username, forKey: "username")
-                                    userSettings.id = userModel.username
-                                    showAlertRegister = true
+                                    if(userModel.password.isEmpty || userModel.email.isEmpty || userModel.username.isEmpty) {
+                                        showAlertField = true
+                                    } else {
+                                        try await userModel.insert(username: userModel.username, password: userModel.password, email: userModel.email)
+                                        let usrDef = UserDefaults.standard
+                                        usrDef.set(userModel.username, forKey: "username")
+                                        userSettings.id = userModel.username
+                                        showAlertRegister = true
+                                    }
                                 }
                             }, label: {
                                 ZStack {
@@ -202,6 +205,9 @@ struct RegistrationView: View {
                     }
                     if (showAlertRegister) {
                         AlertReg(showAlertRegister: $showAlertRegister)
+                    }
+                    if (showAlertField) {
+                        AlertField(showAlertField: $showAlertField)
                     }
                     
                 }
