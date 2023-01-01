@@ -128,7 +128,7 @@ struct CreateEventView: View {
                 Text("Cancel").fontWeight(.bold)
             } ,trailing: Button(action: {
                 Task {
-                    pushNotification.subscribeEvent(textType: "Event")
+//                    pushNotification.subscribeEvent(textType: "Event")
                     try await eventModel.insertEvent(name: nameEvent, address: address, location: location, info: info, capability: Int(capability) ?? 0, date: dateEvents, timeForPrice: timePrices, price: prices.map{Int($0) }, table: tables.map{String($0)})
                     try await roleModel.insert(username: userSettings.id, permission: 3, idEvent: eventModel.eventID!)
                     presentationMode.wrappedValue.dismiss()

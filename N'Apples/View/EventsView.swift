@@ -11,6 +11,8 @@ struct EventsView: View {
     @State var modal: ModalType? = nil
     @State var indici: [Int] = []
     
+    @State var pushNotification: CloudkitPushNotificationViewModel = CloudkitPushNotificationViewModel()
+    
     @ObservedObject var userSettings = UserSettings()
     @ObservedObject var viewModel = ScannerViewModel()
     
@@ -112,6 +114,7 @@ struct EventsView: View {
         })
         
         .onAppear {
+            pushNotification.requestNotificationPermission()
             Task {
                 do {
                     print("User settings: \(userSettings.id)")

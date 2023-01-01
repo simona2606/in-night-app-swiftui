@@ -209,6 +209,7 @@ struct AddRoleView: View {
                     } ,trailing: Button(action: {
                         Task {
                             pushNotification.subscribe(textType: "Role", userName: userViewModel.user.first!.username)
+//                            pushNotification.subscribeEvent(textType: "Role")
                             if selectedRole == 0 {
                                 permission = 0
                             }
@@ -219,6 +220,7 @@ struct AddRoleView: View {
                             }
                             
                             try await roleViewModel.update(usename: userViewModel.user.first!.username, idEvent: updateEventViewModel.eventID, permission: permission)
+                            pushNotification.unsubscribe(userName: userViewModel.user.first!.username)
                             presentationMode.wrappedValue.dismiss()
                         }
                     }) {

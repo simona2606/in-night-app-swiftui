@@ -65,9 +65,9 @@ class CloudkitPushNotificationViewModel: ObservableObject{
 
         let predicate = NSPredicate(format: "content CONTAINS[c] %@", "userName")
 //        let predicate = NSPredicate(format: "%K == %@", argumentArray: ["recipient", userName])
-        let subscription = CKQuerySubscription(recordType: textType, predicate: predicate, options: .firesOnRecordCreation)
+//        let subscription = CKQuerySubscription(recordType: textType, predicate: predicate, options: .firesOnRecordCreation)
        
-        let subscription1 = CKQuerySubscription(recordType: textType, predicate: predicate, subscriptionID: "event_added_to_database", options: .firesOnRecordDeletion)
+        let subscription1 = CKQuerySubscription(recordType: textType, predicate: predicate, subscriptionID: "role_added_to_database", options: .firesOnRecordDeletion)
   
         let notification = CKSubscription.NotificationInfo()
        
@@ -75,10 +75,10 @@ class CloudkitPushNotificationViewModel: ObservableObject{
         notification.alertBody = "Open the app to view this"
         notification.soundName = "default"
         
-        subscription.notificationInfo = notification
+//        subscription.notificationInfo = notification
         subscription1.notificationInfo = notification
         
-        CKContainer.default().publicCloudDatabase.save(subscription){ returnedSubscription,returnedError in
+        CKContainer.default().publicCloudDatabase.save(subscription1){ returnedSubscription,returnedError in
             if let error = returnedError {
                 print(error)
             } else {

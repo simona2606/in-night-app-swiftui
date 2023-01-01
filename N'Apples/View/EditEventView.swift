@@ -142,7 +142,7 @@ struct EditEventView: View {
                 Text("Cancel").fontWeight(.bold)
             } ,trailing: Button(action: {
                 Task {
-                    pushNotification.subscribeEvent(textType: "Event")
+//                    pushNotification.subscribeEvent(textType: "Event")
                     try await eventModel.update(idEvent: updateEventViewModel.eventID, name: updateEventViewModel.eventName, address: updateEventViewModel.eventAddress, location: updateEventViewModel.eventLoaction, info: updateEventViewModel.eventInfo, capability: Int(capability) ?? 0, date: updateEventViewModel.eventDate, lists: updateEventViewModel.eventLists, table: updateEventViewModel.eventTable.map{String($0)}, price: updateEventViewModel.eventPrice, timeForPrice: updateEventViewModel.eventTimeForPrice)
                     flagActive = false
                     presentationMode.wrappedValue.dismiss()

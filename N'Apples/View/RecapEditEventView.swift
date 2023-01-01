@@ -161,7 +161,6 @@ struct RecapEditEventView: View {
                     
                     Button(action: {
                         Task {
-                            pushNotification.subscribeEvent(textType: "Event")
                             showingSheet.toggle()
                         }
                         
