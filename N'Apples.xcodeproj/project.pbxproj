@@ -12,6 +12,7 @@
 		3E3C33E3282BB5AC0073B6E8 /* QrCodeCameraDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3C33E0282BB5AC0073B6E8 /* QrCodeCameraDelegate.swift */; };
 		3E3C33EC282BB6B40073B6E8 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3C33E6282BB6B30073B6E8 /* Alert.swift */; };
 		3E3C33F0282BB6B40073B6E8 /* ScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3C33EA282BB6B40073B6E8 /* ScannerViewModel.swift */; };
+		3E56AC0F29630AA6003BAD7C /* AlertEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E56AC0E29630AA6003BAD7C /* AlertEmail.swift */; };
 		3E59823D283CEC3E006CB6D8 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E59823C283CEC3E006CB6D8 /* UserSettings.swift */; };
 		3E661A1F294A2A90002B8378 /* AlertLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E661A1E294A2A90002B8378 /* AlertLogin.swift */; };
 		3E661A21294A2F41002B8378 /* AlertReg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E661A20294A2F41002B8378 /* AlertReg.swift */; };
@@ -66,6 +67,7 @@
 		3E3C33E0282BB5AC0073B6E8 /* QrCodeCameraDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QrCodeCameraDelegate.swift; sourceTree = "<group>"; };
 		3E3C33E6282BB6B30073B6E8 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		3E3C33EA282BB6B40073B6E8 /* ScannerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewModel.swift; sourceTree = "<group>"; };
+		3E56AC0E29630AA6003BAD7C /* AlertEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertEmail.swift; sourceTree = "<group>"; };
 		3E59823C283CEC3E006CB6D8 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		3E661A1E294A2A90002B8378 /* AlertLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertLogin.swift; sourceTree = "<group>"; };
 		3E661A20294A2F41002B8378 /* AlertReg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertReg.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				3E661A20294A2F41002B8378 /* AlertReg.swift */,
 				3EF81BC1295F05A100759C03 /* AlertDelEvent.swift */,
 				3EE5083129624D4E0019D45D /* AlertField.swift */,
+				3E56AC0E29630AA6003BAD7C /* AlertEmail.swift */,
 			);
 			path = Alert;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				3EAD4F7B282679BF007496B8 /* N_ApplesApp.swift in Sources */,
 				3ED7B2E1295637E200AEBD95 /* ScannerView.swift in Sources */,
 				3E661A21294A2F41002B8378 /* AlertReg.swift in Sources */,
+				3E56AC0F29630AA6003BAD7C /* AlertEmail.swift in Sources */,
 				3EDDCF21294CD534009EE234 /* RecapEditEventView.swift in Sources */,
 				3E661A1F294A2A90002B8378 /* AlertLogin.swift in Sources */,
 				3EAD4F9728268D90007496B8 /* ReservationModel.swift in Sources */,

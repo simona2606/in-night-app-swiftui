@@ -27,6 +27,8 @@ struct RegistrationView: View {
     @State var showAlertField: Bool = false
     @State var showAlertRegister: Bool = false
     
+    @State var showAlertEmail: Bool = false
+    
     private var isSignedIn: Bool {
         !userModel.userID.isEmpty
     }
@@ -151,9 +153,12 @@ struct RegistrationView: View {
                             
                             
                             Button(action: {
+                                let check = isValidEmailAddress(emailAddressString: userModel.email)
                                 Task {
                                     if(userModel.password.isEmpty || userModel.email.isEmpty || userModel.username.isEmpty) {
                                         showAlertField = true
+                                    } else if (!check) {
+                                        showAlertEmail.toggle()
                                     } else {
                                         try await userModel.insert(username: userModel.username, password: userModel.password, email: userModel.email)
                                         let usrDef = UserDefaults.standard
@@ -203,6 +208,9 @@ struct RegistrationView: View {
                     if (showAlert) {
                         AlertLogin(showAlert: $showAlert)
                     }
+                    if (showAlertEmail) {
+                        AlertEmail(showAlertEmail: $showAlertEmail)
+                    }
                     if (showAlertRegister) {
                         AlertReg(showAlertRegister: $showAlertRegister)
                     }
@@ -234,5 +242,28 @@ struct RegistrationView: View {
         .navigationBarHidden(true)
         
     }
+    
+    func isValidEmailAddress(emailAddressString: String) -> Bool {
+            
+            var returnValue = true
+            let emailRegEx = "[A-Z0-9a-z.-_]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,3}"
+            
+            do {
+                let regex = try NSRegularExpression(pattern: emailRegEx)
+                let nsString = emailAddressString as NSString
+                let results = regex.matches(in: emailAddressString, range: NSRange(location: 0, length: nsString.length))
+                
+                if results.count == 0
+                {
+                    returnValue = false
+                }
+                
+            } catch let error as NSError {
+                print("invalid regex: \(error.localizedDescription)")
+                returnValue = false
+            }
+            
+            return  returnValue
+        }
     
 }
