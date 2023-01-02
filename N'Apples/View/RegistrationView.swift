@@ -159,7 +159,7 @@ struct RegistrationView: View {
                                         showAlertField = true
                                     } else if (!check) {
                                         showAlertEmail = true
-                                    } else if (userModel.password.count < 8) {
+                                    } else if (userModel.password.count < 6) {
                                         showAlertPw = true
                                     } else {
                                         try await userModel.insert(username: userModel.username, password: userModel.password, email: userModel.email)
