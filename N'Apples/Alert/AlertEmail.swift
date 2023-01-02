@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct AlertEmail: View {
-    
     @Binding var showAlertEmail: Bool
     
     var body: some View {

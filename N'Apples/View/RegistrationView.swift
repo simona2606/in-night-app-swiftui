@@ -26,8 +26,8 @@ struct RegistrationView: View {
     @State var showAlert: Bool = false
     @State var showAlertField: Bool = false
     @State var showAlertRegister: Bool = false
-    
     @State var showAlertEmail: Bool = false
+    @State var showAlertPw: Bool = false
     
     private var isSignedIn: Bool {
         !userModel.userID.isEmpty
@@ -158,7 +158,9 @@ struct RegistrationView: View {
                                     if(userModel.password.isEmpty || userModel.email.isEmpty || userModel.username.isEmpty) {
                                         showAlertField = true
                                     } else if (!check) {
-                                        showAlertEmail.toggle()
+                                        showAlertEmail = true
+                                    } else if (userModel.password.count < 8) {
+                                        showAlertPw = true
                                     } else {
                                         try await userModel.insert(username: userModel.username, password: userModel.password, email: userModel.email)
                                         let usrDef = UserDefaults.standard
@@ -210,6 +212,9 @@ struct RegistrationView: View {
                     }
                     if (showAlertEmail) {
                         AlertEmail(showAlertEmail: $showAlertEmail)
+                    }
+                    if (showAlertPw) {
+                        AlertPw(showAlertPw: $showAlertPw)
                     }
                     if (showAlertRegister) {
                         AlertReg(showAlertRegister: $showAlertRegister)

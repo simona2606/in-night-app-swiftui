@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E07802B29630D2A00B64BB4 /* AlertPw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E07802A29630D2A00B64BB4 /* AlertPw.swift */; };
 		3E3C33E1282BB5AC0073B6E8 /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3C33DE282BB5AC0073B6E8 /* CameraPreview.swift */; };
 		3E3C33E2282BB5AC0073B6E8 /* ImageSaved.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3C33DF282BB5AC0073B6E8 /* ImageSaved.swift */; };
 		3E3C33E3282BB5AC0073B6E8 /* QrCodeCameraDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3C33E0282BB5AC0073B6E8 /* QrCodeCameraDelegate.swift */; };
@@ -62,6 +63,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E07802A29630D2A00B64BB4 /* AlertPw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPw.swift; sourceTree = "<group>"; };
 		3E3C33DE282BB5AC0073B6E8 /* CameraPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
 		3E3C33DF282BB5AC0073B6E8 /* ImageSaved.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSaved.swift; sourceTree = "<group>"; };
 		3E3C33E0282BB5AC0073B6E8 /* QrCodeCameraDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QrCodeCameraDelegate.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				3EF81BC1295F05A100759C03 /* AlertDelEvent.swift */,
 				3EE5083129624D4E0019D45D /* AlertField.swift */,
 				3E56AC0E29630AA6003BAD7C /* AlertEmail.swift */,
+				3E07802A29630D2A00B64BB4 /* AlertPw.swift */,
 			);
 			path = Alert;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				3EF81BC2295F05A100759C03 /* AlertDelEvent.swift in Sources */,
 				3EE6AEEA2951AF6D00965A2C /* PriceCardView.swift in Sources */,
 				3E3C33F0282BB6B40073B6E8 /* ScannerViewModel.swift in Sources */,
+				3E07802B29630D2A00B64BB4 /* AlertPw.swift in Sources */,
 				3EE5083229624D4E0019D45D /* AlertField.swift in Sources */,
 				3ED57BB0294DF1CD00637616 /* EditEventView.swift in Sources */,
 				3E80318E28578FEC00837C39 /* AlertCancelPrice.swift in Sources */,
