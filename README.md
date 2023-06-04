@@ -1,4 +1,4 @@
-# InNight
+# InNight 💥
 This App aims to help the managment of events.
 
 ***InNight*** provides on the one hand the possibility to manage the event by the actors involved, on the other hand the possibility to participate in a given event through simple QR-codes produced by the application.
@@ -14,5 +14,6 @@ However, the booking process can also take place through a link in the event’s
 This also makes it very easy to share the event, as all that is needed is for the Admin or contributors to forward the event link via chat or social, also increasing the visibility of the event.
 
 A registration system is provided via username, email and password, or simply via Apple account.
+
 
 ![](https://github.com/simona2606/InNight/blob/main/N'Apples/Assets.xcassets/InNight.png)
