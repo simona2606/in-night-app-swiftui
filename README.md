@@ -15,3 +15,4 @@ This also makes it very easy to share the event, as all that is needed is for th
 
 A registration system is provided via username, email and password, or simply via Apple account.
 
+![](https://github.com/simona2606/InNight/blob/main/N'Apples/Assets.xcassets/InNight.png)
